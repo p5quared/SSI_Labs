@@ -2,6 +2,7 @@
 #define CUSTOMER_H
 
 #include <vector>
+#include <iostream>
 #include "cart.h"
 
 class Customer {

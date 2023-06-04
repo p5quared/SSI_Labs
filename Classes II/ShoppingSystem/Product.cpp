@@ -1,31 +1,18 @@
-#include "customer.h"
-#include <iostream>
+#include "Product.h"
 
-Customer::Customer(const std::string& name) : name(name) {}
+Product::Product(const std::string& name, double price, int quantity) : name(name), price(price), quantity(quantity) {}
 
-void Customer::viewProducts(const std::vector<Product>& products) const {
-    std::cout << "Available Products:" << std::endl;
-    for (const auto& product : products) {
-        product.getDetails();
-        std::cout << std::endl;
-    }
+void Product::getDetails() const {
+    std::cout << "Name: " << name << std::endl;
+    std::cout << "Price: $" << price << std::endl;
+    std::cout << "Quantity: " << quantity << std::endl;
 }
 
-void Customer::addToCart(const std::string& name, const std::vector<Product>& products, Cart& cart) {
-    for (const auto& product : products) {
-        if (product.getName() == name) {
-            cart.addProduct(product);
-            std::cout << "Product added to cart." << std::endl;
-            return;
-        }
-    }
-    std::cout << "Product not found." << std::endl;
+std::string Product::getName() const {
+    return name;
 }
 
-void Customer::removeFromCart(const std::string& name, Cart& cart) {
-    cart.removeProduct(name);
+double Product::getPrice() const {
+    return price;
 }
 
-void Customer::checkout(Cart& cart) {
-    cart.checkout();
-}

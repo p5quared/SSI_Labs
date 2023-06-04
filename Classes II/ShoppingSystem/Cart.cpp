@@ -24,3 +24,15 @@ void Cart::checkout() {
 
     products.clear();
 }
+
+float Cart::getTotal() const {
+    float total = 0.0;
+    for (const auto& product : products) {
+        total += product.getPrice();
+    }
+    return total;
+}
+
+void Cart::empty() {
+    products.clear();
+}
