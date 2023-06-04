@@ -63,6 +63,12 @@ Example:
 ```c++
 std::unique_ptr<int> pointer = std::make_unique<int>(42);  // dynamically allocate memory for an integer
 ```
+## Resources
+I highly recommend you learn by hands-on experience, however it is natural to have questions.
+Here are what are in my opinion, the best resources to learn about C++ in general:
+1. [CPP Reference](https://en.cppreference.com/w/)
+2. [LearnCPP](https://www.learncpp.com/)
+3. [The Cherno](https://youtube.com/playlist?list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb)
 
 
 
